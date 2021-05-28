@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh 'chmod +x scripts/build.sh'
                 sh 'scripts/build.sh'
+                sh 'python3 scripts/pybuild.py'
             }
         }
         stage('test') {
