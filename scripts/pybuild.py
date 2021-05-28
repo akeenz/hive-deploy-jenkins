@@ -13,5 +13,5 @@ data = json.load(f)
 #  print(data('filename'))
 for i in data:
     file = i['filename']
-    os.system('cp emr-data-hive/' + file + ' artifact_folder') 
+    os.system('cp emr-hive-dataset/' + file + ' artifact_folder') 
   
