@@ -10,5 +10,5 @@ git clone https://github.com/${owner}/${reponames}.git
 cd ${reponames}
 git checkout ${pr_branch_name}
 echo "we are in ${pr_branch_name} branch "
-python3 scripts/pybuild.py
+
 
