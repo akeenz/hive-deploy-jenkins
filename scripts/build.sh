@@ -6,3 +6,4 @@ reponame=emr-data-hive
 curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${owner}/${reponame}/pulls/${prnumber}/files >> pr_info.json
 git clone https://github.com/${owner}/${reponame}.git
 python scripts/pybuild.py
+#clone sucesfull
