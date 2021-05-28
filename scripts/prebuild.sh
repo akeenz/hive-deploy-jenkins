@@ -4,4 +4,9 @@ if [ -d "$DIR" ]; then
   rm -rf ${DIR}
   echo "I'm deleting  ${DIR}..."
 fi
-pwd
+DIR1="emr-hive-dataset/"
+if [ -d "$DIR1" ]; then
+  # Take action if $DIR exists. #
+  rm -rf ${DIR1}
+  echo "I'm deleting  ${DIR1}..."
+fi
