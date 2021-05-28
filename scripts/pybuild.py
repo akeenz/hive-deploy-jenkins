@@ -13,5 +13,6 @@ data = json.load(f)
 #  print(data('filename'))
 for i in data:
     file = i['filename']
-    os.system('cp emr-hive-dataset/' + file + ' artifact_folder') 
+    if i['status'] != 'removed':
+        os.system('cp emr-hive-dataset/' + file + ' artifact_folder') 
   
