@@ -24,7 +24,6 @@ pipeline {
         stage('tablecreate') {
             steps {
                sh 'python3 scripts/tablecreate.py'
-                
             }
         }
     }
