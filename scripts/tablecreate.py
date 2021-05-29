@@ -13,8 +13,8 @@ conn = pymysql.connect(
         password = os.getenv('DB_PASSWORD'),
         db = os.getenv('DB_NAME'),
         )
-    conn.autocommit = True
-    cursor = conn.cursor()
+conn.autocommit = True
+cursor = conn.cursor()
     # sql_file=open("artifact_folder/sale.sql")
     # sql_as_string=sql_file.read()
     # cursor.execute(sql_as_string)
