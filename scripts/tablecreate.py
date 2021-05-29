@@ -8,14 +8,14 @@ DB_NAME="chalice_db"
 
 
 conn = pymysql.connect(
-        host = os.getenv('DB_HOST'),
-        user = os.getenv('DB_USER'),
-        password = os.getenv('DB_PASSWORD'),
-        db = os.getenv('DB_NAME'),
+        host=DB_HOST,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        db=DB_NAME,
         )
 conn.autocommit = True
 cursor = conn.cursor()
-    # sql_file=open("artifact_folder/sale.sql")
-    # sql_as_string=sql_file.read()
-    # cursor.execute(sql_as_string)
-    # cursor.execute("select * from Persons")
+sql_file=open("artifact_folder/sale.sql")
+sql_as_string=sql_file.read()
+cursor.execute(sql_as_string)
+cursor.execute("select * from Persons")
