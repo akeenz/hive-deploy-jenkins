@@ -1,4 +1,4 @@
-import os
+
 #create directory needed
 mkdir artifact_folder
 owner=akeenz
@@ -17,7 +17,7 @@ echo "we are in ${PR_BRANCH_NAME} branch "
 
 PR_BRANCH_DESTINATION=$(echo $PR_PROPERTY | jq .base.ref | tr -d '"')
 IS_MERGED=$(echo $PR_PROPERTY | jq .merged | tr -d '"')
-DEPLOYMENT_ENV=os.getenv('DEPLOYMENT_ENV')
+#LOYMENT_ENV=os.getenv('DEPLOYMENT_ENV')
 #if this is a prod deployment, check if the PR has been merged into master
 echo "Deploying into ${DEPLOYMENT_ENV}"
 echo "This PR is Merging from ${PR_BRANCH_NAME} into ${PR_BRANCH_DESTINATION}"
