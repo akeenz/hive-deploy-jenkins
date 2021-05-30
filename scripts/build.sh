@@ -11,7 +11,7 @@ echo "I will be cloning the dataset repo"
 git clone https://github.com/${owner}/${reponames}.git
 cd ${reponames}
 git checkout ${PR_BRANCH_NAME}
-echo "we are in ${PR_BRANCH-NAME} branch "
+echo "we are in ${PR_BRANCH_NAME} branch "
 
 
 PR_BRANCH_DESTINATION=$(echo $PR_PROPERTY | jq .base.ref | tr -d '"')
