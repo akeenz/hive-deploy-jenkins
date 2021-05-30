@@ -2,17 +2,6 @@
 mkdir artifact_folder
 owner=akeenz
 reponames=emr-hive-dataset
-#Validate PR number
-re='^[0-9]+$'
-if [[ ${prnumber} =~ $re ]] ; then
-    if ! [[ "${PR_VALIDITY}" == "null" ]] ; then
-        echo "Looks like "${PR_NUMBER}" is not a Valid PR Number for the Dataset Repo"
-        exit -1
-    fi
-else
-    echo "Enter a Numeric Value for PR_NUMBER"
-    exit -1
-fi 
 #write pr related info into a file named pr_info.json because we need the file later
 curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${owner}/${reponames}/pulls/${prnumber}/files > pr_info.json
 PR_PROPERTY=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${owner}/${reponames}/pulls/${prnumber})
