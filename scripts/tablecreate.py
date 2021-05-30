@@ -15,6 +15,6 @@ conn = pymysql.connect(
 conn.autocommit = True
 cursor = conn.cursor() 
 query=("select * from Persons$")
-sale = pd.read_sql(query, cursor)
-sale.head(10)
+cursor.execute(query)
+
 
