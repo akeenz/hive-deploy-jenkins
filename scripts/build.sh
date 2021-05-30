@@ -1,3 +1,4 @@
+import os
 #create directory needed
 mkdir artifact_folder
 owner=akeenz
