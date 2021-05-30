@@ -14,7 +14,8 @@ conn = pymysql.connect(
         )
 conn.autocommit = True
 cursor = conn.cursor() 
-query=("select * from Persons$")
-cursor.execute(query)
+sql_file= open('artifact_folder/sale.sql')
+sql_as_string = sql_file.read()
+cursor.executescript(sql_as_string)
 
 
